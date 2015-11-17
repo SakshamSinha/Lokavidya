@@ -1,0 +1,23 @@
+{
+    "lokavidyaApp": {
+        "audio" : {
+            "home": {
+                "title": "Audios",
+                "createLabel": "Create a new Audio",
+                "createOrEditLabel": "Create or edit a Audio"
+            },
+            "created": "A new Audio is created with identifier {{ param }}",
+            "updated": "A Audio is updated with identifier {{ param }}",
+            "deleted": "A Audio is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Audio {{ id }}?"
+            },
+            "detail": {
+                "title": "Audio"
+            },
+            "name": "Name",
+            "sync": "Sync",
+            "segment": "Segment"
+        }
+    }
+}

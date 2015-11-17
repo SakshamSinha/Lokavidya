@@ -1,0 +1,9 @@
+{
+    "lokavidyaApp": {
+        "OwnershipType" : {
+            "null": "",
+            "PROJ": "PROJ",
+            "TUTORIAL": "TUTORIAL"
+        }
+    }
+}

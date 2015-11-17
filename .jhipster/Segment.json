@@ -1,0 +1,48 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "segmentSegmentVideo",
+      "otherEntityName": "segmentVideo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "segmentVideo",
+      "otherEntityName": "video",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "segment"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "segmentImage",
+      "otherEntityName": "image",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "segment"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "segmentAudio",
+      "otherEntityName": "audio",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "segment"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "sync",
+      "fieldType": "Boolean",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20151117101721",
+  "dto": "no",
+  "pagination": "no"
+}

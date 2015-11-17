@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "lokavidya",
+    "packageName": "in.iitb",
+    "packageFolder": "in/iitb",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "gradle",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "4ada14880c8f790335d900ee1b96cd8ed429b1a1",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

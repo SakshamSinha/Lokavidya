@@ -1,0 +1,28 @@
+{
+    "lokavidyaApp": {
+        "project" : {
+            "home": {
+                "title": "Projects",
+                "createLabel": "Créer un nouveau Project",
+                "createOrEditLabel": "Créer ou éditer un Project"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Project {{ id }} ?"
+            },
+            "detail": {
+                "title": "Project"
+            },
+            "title": "Title",
+            "description": "Description",
+            "creationDate": "CreationDate",
+            "accessibility": "Accessibility",
+            "user": "User",
+            "tag": "Tag",
+            "comment": "Comment",
+            "tutorial": "Tutorial",
+            "consists": "Consists",
+            "ownersAre": "OwnersAre"
+        }
+    }
+}
+

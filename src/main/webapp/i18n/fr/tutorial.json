@@ -1,0 +1,27 @@
+{
+    "lokavidyaApp": {
+        "tutorial" : {
+            "home": {
+                "title": "Tutorials",
+                "createLabel": "Créer un nouveau Tutorial",
+                "createOrEditLabel": "Créer ou éditer un Tutorial"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tutorial {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tutorial"
+            },
+            "title": "Title",
+            "description": "Description",
+            "tutProj": "TutProj",
+            "user": "User",
+            "project": "Project",
+            "comment": "Comment",
+            "extVideo": "ExtVideo",
+            "tutorialSVideo": "TutorialSVideo",
+            "ownersProject": "OwnersProject"
+        }
+    }
+}
+

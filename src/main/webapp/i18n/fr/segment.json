@@ -1,0 +1,23 @@
+{
+    "lokavidyaApp": {
+        "segment" : {
+            "home": {
+                "title": "Segments",
+                "createLabel": "Créer un nouveau Segment",
+                "createOrEditLabel": "Créer ou éditer un Segment"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Segment {{ id }} ?"
+            },
+            "detail": {
+                "title": "Segment"
+            },
+            "sync": "Sync",
+            "segmentSegmentVideo": "SegmentSegmentVideo",
+            "segmentVideo": "SegmentVideo",
+            "segmentImage": "SegmentImage",
+            "segmentAudio": "SegmentAudio"
+        }
+    }
+}
+

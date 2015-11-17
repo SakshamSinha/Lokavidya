@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="lokavidyaApp.video.detail.title">Video</span> {{video.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.video.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{video.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.video.sync">Sync</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{video.sync}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.video.segment">segment</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="segment.detail({id:video.segment.id})">{{video.segment.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

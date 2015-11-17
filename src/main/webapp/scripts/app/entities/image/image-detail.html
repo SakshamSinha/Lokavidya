@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="lokavidyaApp.image.detail.title">Image</span> {{image.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.image.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{image.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.image.caption">Caption</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{image.caption}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.image.sync">Sync</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{image.sync}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.image.segment">segment</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="segment.detail({id:image.segment.id})">{{image.segment.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

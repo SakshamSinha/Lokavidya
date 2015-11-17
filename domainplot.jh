@@ -1,0 +1,133 @@
+enum Accesibility
+{
+	PUBLIC,PRIVATE
+}
+entity Project{
+  title String required,
+  description String required minlength(5) maxlength(50),
+  creationDate LocalDate,
+  accessibility Accesibility 
+}
+
+entity Tutorial{
+	title String required,
+	description String required	
+}
+entity ExtVideo
+{
+	title String required,
+	url String required,
+	isYoutube Boolean required
+}
+entity SegmentVideo
+{
+	sync Boolean required
+}
+entity SegmentSequence
+{
+	segmentsequence String required 
+}
+entity Segment
+{
+	sync Boolean required
+}
+entity Video
+{
+	name String required,
+	sync Boolean required
+}
+entity Image{
+	name String required,
+	caption String ,
+	sync Boolean required
+}
+entity Audio{
+	name String required,
+	sync Boolean required
+}
+entity Tag
+{
+	name String required,
+	description String required
+}
+enum OwnershipType{
+	PROJ,TUTORIAL
+}
+enum Rights
+{
+	ADMIN,CONTRIBUTOR,REVIEWER
+}
+entity Ownership
+{
+	type OwnershipType,
+	right Rights
+}
+entity Comment 
+{
+	content String required
+}
+
+
+relationship OneToOne{
+    Project{createdByUser} to User{creator}
+}
+relationship ManyToOne{
+    Project{ownersAre} to Ownership{ownersOf}
+}
+relationship ManyToMany{
+    Project{projectTag} to Tag{tagProjects}
+}
+relationship OneToMany{
+    Project{projectComments} to Comment{commentProjects}
+}
+relationship OneToMany{
+    Project{projectTut} to Tutorial{tutProj}
+}
+relationship OneToOne{
+    Tutorial{createdBy} to User{creatorTutorial}
+}
+relationship OneToOne{
+    Tutorial{partOf} to Project{consists}
+}
+relationship OneToMany{
+    Tutorial{tutorialcomment} to Comment{commentTutorial}
+}
+relationship ManyToOne{
+    Tutorial{ownersProject} to Ownership{projectOwners}
+}
+
+relationship OneToOne
+{
+    Tutorial{tutorialExtVideo} to ExtVideo{extVideoTutorial}
+}
+
+relationship OneToOne
+{
+    SegmentSequence{segmentSequenceSVideo} to SegmentVideo{segmentVideoSSequence}
+}
+relationship OneToMany
+{
+    SegmentVideo{segmentVideoSegment} to Segment{segmentSegmentVideo}
+}
+relationship OneToOne
+{
+    SegmentVideo{segmentVideoTutorial} to Tutorial{tutorialSVideo}
+}
+
+relationship OneToOne
+{
+    Image{imageSegment} to Segment{segmentImage}
+}
+relationship OneToOne
+{
+    Audio{audioSegment} to Segment{segmentAudio}
+}
+relationship OneToOne
+{
+    Video{videoSegment} to Segment{segmentVideo}
+}
+
+relationship ManyToOne
+{
+   Ownership{ownershipUser} to User{userOwnership}
+}

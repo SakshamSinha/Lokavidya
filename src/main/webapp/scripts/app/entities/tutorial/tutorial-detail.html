@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="lokavidyaApp.tutorial.detail.title">Tutorial</span> {{tutorial.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.title">Title</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tutorial.title}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tutorial.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.tutProj">tutProj</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="project.detail({id:tutorial.tutProj.id})">{{tutorial.tutProj.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.user">user</span>
+                </td>
+                <td>
+                    {{tutorial.user.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.project">project</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="project.detail({id:tutorial.project.id})">{{tutorial.project.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.extVideo">extVideo</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="extVideo.detail({id:tutorial.extVideo.id})">{{tutorial.extVideo.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="lokavidyaApp.tutorial.ownersProject">ownersProject</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="ownership.detail({id:tutorial.ownersProject.id})">{{tutorial.ownersProject.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

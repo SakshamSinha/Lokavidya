@@ -1,0 +1,21 @@
+{
+    "lokavidyaApp": {
+        "audio" : {
+            "home": {
+                "title": "Audios",
+                "createLabel": "Créer un nouveau Audio",
+                "createOrEditLabel": "Créer ou éditer un Audio"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Audio {{ id }} ?"
+            },
+            "detail": {
+                "title": "Audio"
+            },
+            "name": "Name",
+            "sync": "Sync",
+            "segment": "Segment"
+        }
+    }
+}
+

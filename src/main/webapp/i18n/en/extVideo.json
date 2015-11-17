@@ -1,0 +1,24 @@
+{
+    "lokavidyaApp": {
+        "extVideo" : {
+            "home": {
+                "title": "ExtVideos",
+                "createLabel": "Create a new ExtVideo",
+                "createOrEditLabel": "Create or edit a ExtVideo"
+            },
+            "created": "A new ExtVideo is created with identifier {{ param }}",
+            "updated": "A ExtVideo is updated with identifier {{ param }}",
+            "deleted": "A ExtVideo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete ExtVideo {{ id }}?"
+            },
+            "detail": {
+                "title": "ExtVideo"
+            },
+            "title": "Title",
+            "url": "Url",
+            "isYoutube": "IsYoutube",
+            "extVideoTutorial": "ExtVideoTutorial"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "lokavidyaApp": {
+        "Rights" : {
+            "null": "",
+            "ADMIN": "ADMIN",
+            "CONTRIBUTOR": "CONTRIBUTOR",
+            "REVIEWER": "REVIEWER"
+        }
+    }
+}

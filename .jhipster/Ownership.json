@@ -1,0 +1,42 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "project",
+      "otherEntityName": "project",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "ownersAre"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "tutorial",
+      "otherEntityName": "tutorial",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "ownersProject"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "ownershipUser",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "type",
+      "fieldType": "OwnershipType",
+      "fieldValues": "PROJ,TUTORIAL"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "right",
+      "fieldType": "Rights",
+      "fieldValues": "ADMIN,CONTRIBUTOR,REVIEWER"
+    }
+  ],
+  "changelogDate": "20151117101721",
+  "dto": "no",
+  "pagination": "no"
+}

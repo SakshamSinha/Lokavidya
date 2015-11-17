@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="mySegmentLabel" translate="lokavidyaApp.segment.home.createOrEditLabel">Create or edit a Segment</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="segment.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.segment.sync" for="field_sync">Sync</label>
+            <input type="checkbox" class="form-control" name="sync" id="field_sync"
+                    ng-model="segment.sync"
+                     />
+            <div ng-show="editForm.sync.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sync.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="lokavidyaApp.segment.segmentSegmentVideo" for="field_segmentSegmentVideo">segmentSegmentVideo</label>
+            <select class="form-control" id="field_segmentSegmentVideo" name="segmentSegmentVideo" ng-model="segment.segmentSegmentVideo" ng-options="segmentVideo as segmentVideo.id for segmentVideo in segmentvideos track by segmentVideo.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

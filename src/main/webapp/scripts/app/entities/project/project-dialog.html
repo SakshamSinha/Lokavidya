@@ -1,0 +1,87 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectLabel" translate="lokavidyaApp.project.home.createOrEditLabel">Create or edit a Project</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="project.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="project.title"
+                    required />
+            <div ng-show="editForm.title.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.title.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="project.description"
+                    required ng-minlength="5" ng-maxlength="50" />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.minlength" translate="entity.validation.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.creationDate" for="field_creationDate">CreationDate</label>
+            <input type="date" class="form-control" name="creationDate" id="field_creationDate"
+                    ng-model="project.creationDate"
+                     />
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.accessibility" for="field_accessibility">Accessibility</label>
+            <select class="form-control" name="accessibility" ng-model="project.accessibility" id="field_accessibility">
+                <option value="PUBLIC" translate="lokavidyaApp.Accesibility.PUBLIC">PUBLIC</option>
+                <option value="PRIVATE" translate="lokavidyaApp.Accesibility.PRIVATE">PRIVATE</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.user" for="field_user">user</label>
+            <select class="form-control" id="field_user" name="user" ng-model="project.user" ng-options="user as user.id for user in users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.tag" for="field_tag">tag</label>
+            <select class="form-control" id="field_tag" multiple name="tag" ng-model="project.tags" ng-options="tag as tag.id for tag in tags track by tag.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="lokavidyaApp.project.ownersAre" for="field_ownersAre">ownersAre</label>
+            <select class="form-control" id="field_ownersAre" name="ownersAre" ng-model="project.ownersAre" ng-options="ownership as ownership.id for ownership in ownerships track by ownership.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+{
+    "lokavidyaApp": {
+        "ownership" : {
+            "home": {
+                "title": "Ownerships",
+                "createLabel": "Créer un nouveau Ownership",
+                "createOrEditLabel": "Créer ou éditer un Ownership"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ownership {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ownership"
+            },
+            "type": "Type",
+            "right": "Right",
+            "project": "Project",
+            "tutorial": "Tutorial",
+            "ownershipUser": "OwnershipUser"
+        }
+    }
+}
+
